@@ -448,10 +448,90 @@ img {
     .our-project__title{
         min-width: 224px;
     }
-    .what-we-do.wrapper{
+    .wrapper{
         margin: 0 10%;
     }
-    .header__burger{
-        display: block;
+    .what-we-do{
+        margin-top: 100px;
+    }
+
+    .our-project__title{
+        min-width: 224px;
+    }
+    .header__text{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .what-we-do{
+        display: flex;
+        flex-direction: column;
+    }
+    .what-we-do__title{
+        position: relative;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .what-we-do__card{
+        margin-bottom: 60px;
+    }
+    .what-we-do__card-content{
+        margin: 0 auto;
+    }
+    .our-project__link{
+        padding: 30px;
+    }
+    .our-project__top{
+        flex-direction: column;
+        padding: 80px 0;
+    }
+    .our-project__title{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .our-project__text{
+        text-align: center;
+    }
+    .footer__top{
+        flex-direction: column;
+    }
+    .footer__top-title{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer__top-text{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .footer__top-container{
+        margin: 60px 0;
+    }
+    .footer__top-button{
+        margin-bottom: 60px;
+    }
+    .footer__bottom{
+        flex-direction: column;
+        padding:96px 10% 0 10%;
+    }
+    .footer__bottom-column:nth-child(2){
+        display: flex;
+        align-items: center;
+    }
+    .footer__bottom-column:nth-child(3){
+        display: flex;
+        align-items: center;
+    }
+    .footer__bottom-title{
+        margin-bottom: 16px;
+    }
+    .footer__bottom-link{
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width:760px){
+    .footer__body{
+        width: 100%;
     }
 }
