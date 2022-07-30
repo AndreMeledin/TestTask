@@ -10,38 +10,41 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <div class="header__logo">
+        <div class="header__logo _anim-items _anim-no-hide">
           <img src="icon/logo.svg" alt="logo" class="logo" />
         </div>
-        <div class="header__close"onclick = "closeNav()">x</div>
-        <nav class="header__nav" id="myNav">
-          <a class="menu__link">Home</a>
-          <a class="menu__link">About us</a>
-          <a class="menu__link">Work</a>
-          <a class="menu__link">News</a>
-          <a class="menu__link">Contact</a>
-        </nav>
-        <div class="header__burger" onclick = "openNav()">
-          <img src="icon/ic_menu_48px.svg" alt="" />
+        <div class="header__topnav "id="myNav" >
+          <div class="header__close"onclick = "closeNav()">x</div>
+          <nav class="header__nav" >
+            <a class="menu__link">Home</a>
+            <a class="menu__link">About us</a>
+            <a class="menu__link">Work</a>
+            <a class="menu__link">News</a>
+            <a class="menu__link">Contact</a>
+          </nav>
         </div>
+        
+      </div>
+      <div class="header__burger" onclick = "openNav()">
+        <img src="icon/ic_menu_48px.svg" alt="" />
       </div>
       <div class="header__bottom wrapper">
-        <h1 class="header__title">New Automation Tool for Your Home</h1>
-        <div class="header__text">
+        <h1 class="header__title _anim-items _anim-no-hide">New Automation Tool for Your Home</h1>
+        <div class="header__text _anim-items _anim-no-hide">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
           tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin
           odio tellus elit.
         </div>
-        <button class="header__button">See Our Project</button>
-        <img src="img/illustration.png" alt="" class="header__bg-img" />
+        <button class="header__button _anim-items _anim-no-hide">See Our Project</button>
+        <img src="img/illustration.png" alt="" class="header__bg-img _anim-items _anim-no-hide" />
       </div>
     </header>
     <main>
       <section class="what-we-do wrapper">
-        <div class="what-we-do__title">
+        <div class="what-we-do__title _anim-items _anim-no-hide">
           What we do to helpour client grow in digital era,
         </div>
-        <div class="what-we-do__container-cards">
+        <div class="what-we-do__container-cards _anim-items _anim-no-hide">
           <div class="what-we-do__card">
             <div class="what-we-do__card-content">
               <div class="card__main-img"><img src="img/1.png" alt="" /></div>
@@ -59,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="what-we-do__container-cards">
+        <div class="what-we-do__container-cards _anim-items _anim-no-hide">
           <div class="what-we-do__card">
             <div class="what-we-do__card-content">
               <div class="card__main-img position-top">
@@ -101,15 +104,15 @@
       <section class="our-project">
         <div class="our-project__body wrapper">
           <div class="our-project__top">
-            <div class="our-project__title">Our Beloved Client</div>
-            <div class="our-project__text">
+            <div class="our-project__title _anim-items _anim-no-hide">Our Beloved Client</div>
+            <div class="our-project__text _anim-items _anim-no-hide">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam.
             </div>
           </div>
           <div class="our-project__bottom">
-            <nav class="our-project__nav">
+            <nav class="our-project__nav _anim-items _anim-no-hide">
               <a href="#" class="our-project__link">LOGO CLIENT 1</a>
               <a href="#" class="our-project__link">LOGO CLIENT 2</a>
               <a href="#" class="our-project__link">LOGO CLIENT 3</a>
@@ -127,14 +130,14 @@
         <div class="footer__body">
             <div class="footer__top">
                 <div class="footer__top-container">
-                    <div class="footer__top-title">Intersted to woek with our team?</div>
-                    <div class="footer__top-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                    <div class="footer__top-title _anim-items _anim-no-hide">Intersted to woek with our team?</div>
+                    <div class="footer__top-text _anim-items _anim-no-hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
                 </div>
-                <div class="footer__top-button"><button>Let’s Talk</button></div>
+                <div class="footer__top-button _anim-items _anim-no-hide"><button id="openModal">Let’s Talk</button></div>
             </div>
             <div class="footer__line"></div>
         
-        <div class="footer__bottom">
+        <div class="footer__bottom _anim-items _anim-no-hide">
             <div class="footer__bottom-column">
                 <div class="footer__logo">
                     <img src="icon/logo (1).svg" alt="">
@@ -153,7 +156,7 @@
                     <div class="footer__bottom-text">hello.afrian@gmail.com</div>
                 </div>
             </div>
-            <div class="footer__bottom-column">
+              <div class="footer__bottom-column">
                 <div class="footer__bottom-title">About US</div>
                 <a class="footer__bottom-link">About</a>
                 <a class="footer__bottom-link">What We Do</a>
@@ -167,11 +170,36 @@
                 <a class="footer__bottom-link">LinkedIn</a>
                 <a class="footer__bottom-link">Youtube</a>
             </div>
+          
+            
         </div>
         <div class="footer__privet wrapper">2019 © Afrianska. All rights reserved.</div>
     </div>
-   
     </footer>
+    <div id="popup" class="popup">
+        <div class="popup__content">
+          <a href="#popup" class="popup__close">+</a>
+          <div class="popup__title">SEND US MESSAGE</div>
+          <div class="popup__container-input">
+            <div class="popup__text">Full Name</div>
+            <input type="text" class="popup__input" placeholder="Your Name">
+          </div>
+          <div class="popup__container-input">
+            <div class="popup__text">Email</div>
+            <input type="text" class="popup__input"placeholder="Your Name">
+          </div>
+          <div class="popup__container-input">
+            <div class="popup__text" >Message</div>
+            <!-- <input type="text" class="popup__input input-message" > -->
+            <textarea class="popup__input input-message" placeholder="Your Name"></textarea>
+          </div>
+          <div class="popup__button">
+            <button>submit</button>
+          </div>
+        </div>
+       
+      
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

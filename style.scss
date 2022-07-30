@@ -84,7 +84,9 @@ img {
     vertical-align: top;
 }
 
-
+body.look{
+    overflow: hidden;
+}
 
 .wrapper {
     margin: 0 15%;
@@ -94,20 +96,34 @@ img {
     height: 768px;
     background: linear-gradient(0deg, #98c3e838 8.84%, rgba(152, 195, 232, 0) 31.12%);
 
-    &__top {
+    &__top{
         height: 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 0 84px;
     }
-
-    &__logo {
+    &__topnav {
+        transition: all 0.8s ease 0.2s;
+    }
+   
+    &__logo{
+        opacity: 0;
+        transform: translate(-200px, 0px);
+        transition: all 0.8s ease 0.2s;
+    }
+    &__logo._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__nav {
+       
     }
-
+    
+    &__close{
+        display: none;
+    }
     &__burger {
         display: none;
     }
@@ -124,6 +140,13 @@ img {
         width: 600px;
         padding-top: 110px;
         margin-bottom: 32px;
+        opacity: 0;
+        transform: translate(0px, 200px);
+        transition: all 0.8s ease 0.2s;
+    }
+    &__title._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__text {
@@ -131,9 +154,15 @@ img {
         line-height: 26px;
         letter-spacing: 0.05em;
         color: #1f3f68;
-        opacity: 0.6;
         width: 425px;
         margin-bottom: 70px;
+        opacity:0;
+        transform: translate(0px, 200px);
+        transition: all 0.8s ease 0.4s;
+    }
+    &__text._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__button {
@@ -142,6 +171,13 @@ img {
         border-radius: 10px;
         background: #5a98d0;
         color: white;
+        opacity: 0;
+        transform: translate(0px, 200px);
+        transition: all 0.8s ease 0.4s;
+    }
+    &__button._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__bg-img {
@@ -149,6 +185,13 @@ img {
         right: -18%;
         top: 0;
         z-index: -1;
+        opacity: 0;
+        transform: translate(200px, 0px);
+        transition: all 0.8s ease 0.4s;
+    }
+    &__bg-img._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 }
 .menu {
@@ -177,13 +220,33 @@ img {
         position: absolute;
         left: 0;
         top: 0;
+        opacity: 0;
+        transform: translate(-200px, 0px);
+        transition: all 0.8s ease 0.2s;
     }
-
-    &__container-cards {
+    &__title._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
-    &__container-cards_first-child {
-        align-items: center;
+    &__container-cards:nth-child(2) {
+        opacity: 0;
+        transform: translate(400px, 0px);
+        transition: all 0.8s ease 0.2s;
     }
+    &__container-cards:nth-child(3) {
+        opacity: 0;
+        transform: translate(400px, 0px);
+        transition: all 0.8s ease 0.4s;
+    }
+    &__container-cards:nth-child(2)._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    &__container-cards:nth-child(3)._active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    
 
     &__card {
         display: flex;
@@ -256,6 +319,13 @@ img {
         color: white;
         max-width: 224px;
         margin-right: 98px;
+       
+        transform: translate(-400px, 0px);
+        transition: all 0.8s ease 0.2s;
+    }
+    &__title._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__text {
@@ -264,7 +334,14 @@ img {
         letter-spacing: 0.05em;
         max-width: 540px;
         color: white;
-        opacity: 0.6;
+        opacity: 0;
+        transform: translate(400px, 0px);
+        transition: all 0.8s ease 0.2s;
+    }
+
+    &__text._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
     }
 
     &__bottom {
@@ -279,6 +356,13 @@ img {
         justify-content: center;
         align-items: center;
         text-align: center;
+        opacity: 0;
+        transform: scale(3);
+        transition: all 0.8s ease 0.2s;
+    }
+    &__nav._active{
+        opacity: 1;
+        transform: scale(1);
     }
 
     &__link {
@@ -342,18 +426,34 @@ img {
         color: white;
         width: 320px;
         margin-bottom: 32px;
+        opacity: 0;
+        transform: translate(-400px, 0px);
+        transition: all 0.8s ease 0.2s;
     }
-
+    &__top-title._active{
+        opacity: 1;
+        transform: translate(0px, 0px);
+   
+    }
     &__top-text {
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.05em;
         color: white;
-        opacity: 0.6;
+        opacity: 0;
         width: 460px;
+        transition: all 0.8s ease 0.4s;
+        transform: translate(-400px, 0px);
     }
-
+    
+    &__top-text._active {
+        opacity: 0.6;
+        transform: translate(0px, 0px);
+    }
+    
     &__top-button button{
+        width: 220px;
+        height: 56px;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.04em;
@@ -362,7 +462,19 @@ img {
         background: #5A98D0;
         border-radius: 10px;
         color: white;
+        
     }
+    &__top-button{
+        transition: all 0.8s ease 0.4s;
+        transform: translate(400px, 0px);
+        opacity: 0;
+    }
+    &__top-button._active{
+        transform: translate(0px, 0px);
+        opacity: 1;
+
+    }
+
 
     &__line {
         width:90%;
@@ -375,6 +487,14 @@ img {
         padding: 96px 20% 0 15%;
         display: flex;
         justify-content: space-between;
+        transition: all 0.8s ease 0.4s;
+        transform: translate(0px, -400px);
+        opacity: 0;
+        justify-content: center;
+    }
+    &__bottom._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
     }
 
     &__bottom-column {
@@ -439,7 +559,98 @@ img {
         padding: 64px 0;
     }
 }
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0; 
+    pointer-events: none; 
+    transition: 0.5s all;
+    
+    &__close{
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        display: inline-block;
+        font-size: 44px;
+        color: #1F3F68;
+        transform: rotate(45deg);
+        
+    }
+    
+    &__content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0); 
+        background: #fff;
+        width: 540px;
+        padding: 56px;
+        box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        transition: 0.5s all;
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        font-weight: 600;
+        margin-bottom: 48px;
+    }
 
+    &__container-input {
+        
+    }
+
+    &__text {
+        color: #1F3F68;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        height: 62px;
+        opacity: 0.4;
+        border: 1px solid #356EAD;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 32px;
+        padding: 21px 36px;
+        color: #1F3F68;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+
+    } 
+    &__input.input-message{
+        height: 134px;
+        overflow: hidden;
+        resize: none;
+    }
+   
+    &__button button{
+        height: 72px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background: #5A98D0;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        text-transform: uppercase;
+    }
+}
+.popup.active{
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.5s all;
+}
+.popup__content.active{
+    transform: translate(-50%, -50%) scale(1); 
+    transition: 0.5s all;
+}
 @media screen and (max-width:1200px) {
     .what-we-do__card-content{
         margin-left: 50px;
@@ -458,9 +669,6 @@ img {
     .our-project__title{
         min-width: 224px;
     }
-    .header__text{
-        opacity: 1;
-    }
 }
 
 @media screen and (max-width:960px) {
@@ -472,6 +680,7 @@ img {
         position: relative;
         text-align: center;
         margin-bottom: 40px;
+        width: auto;
     }
     .what-we-do__card{
         margin-bottom: 60px;
@@ -512,17 +721,9 @@ img {
         margin-bottom: 60px;
     }
     .footer__bottom{
-        flex-direction: column;
         padding:96px 10% 0 10%;
     }
-    .footer__bottom-column:nth-child(2){
-        display: flex;
-        align-items: center;
-    }
-    .footer__bottom-column:nth-child(3){
-        display: flex;
-        align-items: center;
-    }
+    
     .footer__bottom-title{
         margin-bottom: 16px;
     }
@@ -530,8 +731,174 @@ img {
         padding: 0 10px;
     }
 }
-@media screen and (max-width:760px){
+@media screen and (max-width:720px){
+    .header{
+        height: 680px;
+    }
+    .header__title{
+        max-width: 400px;
+        font-size: 46px;
+        padding-top: 60px;
+    }
+    .what-we-do__title{
+        font-size: 28px;
+    }
+    
+    .header__text{
+        max-width: 425px;
+    }
+    .header__bg-img{
+        width: 500px;
+    }
+    .our-project{
+        border-radius: 100px 0px 0px 0px;
+    }
+    .our-project__link{
+        padding: 30px 15px;
+    }
     .footer__body{
         width: 100%;
+        border-radius: 0px 100px 0px 0px;
+    }
+    
+   
+    .footer__bottom{
+        flex-direction: column;
+    }
+    .header__burger{
+        display: block;
+    }
+    .header__close{
+        display: block;
+    }
+    .header__topnav{
+        flex-direction: column;
+        justify-content: center;
+        height: 0;
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: #5a98d0;
+        overflow-x: hidden;
+    }
+    .header__burger{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+
+    }
+    .header__burger img{
+        width: 24px;
+    }
+    .header__logo{
+        position: absolute;
+        top: 30px;
+        left: 40px;
+    }
+    .header__close{
+        position: absolute;
+        font-size: 34px;
+        top: 30px;
+        right: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    .header__nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .menu__link{
+        margin: 20px 0;
+        text-align: center;
+        font-weight: 600px;
+        font-size: 36px;
+    }
+    .menu__link:hover{
+        color: white;
+    }
+    
+    .footer__bottom-column-container{
+        justify-content: space-between;
+    }
+    .footer__bottom-link{
+        padding: 0;
+    }
+    .footer__bottom{
+        padding: 96px 15% 0 15%
+    }
+}
+@media screen and (max-width:580px){
+    .popup__content{
+        width: 420px;
+        padding: 32px;
+    }
+    .popup__title{
+        margin-bottom: 30px;
+    }
+    .popup__input{
+        margin-bottom: 20px;
+    }
+
+}
+@media screen and (max-width:420px){
+    .what-we-do__card-content{
+        width: 320px;
+    }
+    .card__title{
+        font-size: 16px;
+    }
+    .card__text{
+        font-size: 14px;
+    }
+    .what-we-do__card-content{
+        padding: 30px;
+    }
+    .header__text{
+        max-width: 320px;
+    }
+    .header__bg-img{
+        width: 400px;
+    }
+    .header__title{
+        font-size: 36px;
+        max-width: 320px;
+        line-height: 50px;
+    }
+    .header__text{
+        max-width: 280px;
+        margin-bottom: 40px;
+    }
+    .header{
+        height: 600px;
+    }
+    .header__title{
+        padding-top: 40px;
+    }
+    .footer__top-title{
+        font-size: 28px;
+        width: 280px;
+    }
+    .footer__top-text{
+        font-size: 16px;
+        width: 280px;
+    }
+    .footer__privet{
+        padding: 32px 0;
+    }
+    .popup__content{
+        width: 320px;
+        padding: 32px;
+    }
+    .popup__input.input-message{
+        height: 100px;
+    }
+    .popup__title{
+        margin-bottom: 24px;
     }
 }
